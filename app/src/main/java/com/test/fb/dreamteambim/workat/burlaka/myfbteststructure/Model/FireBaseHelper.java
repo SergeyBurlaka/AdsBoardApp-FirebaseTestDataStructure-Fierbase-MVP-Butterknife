@@ -1,4 +1,4 @@
-package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.ModelVP;
+package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Model;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -11,9 +11,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MVPresenter.IPresenter;
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MVPresenter.MyChildEventListener;
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MViewP.AdsHolder;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Presenter.IPresenter;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Presenter.MyChildEventListener;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.View.AdsHolder;
 import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.R;
 
 import java.util.HashMap;
@@ -21,9 +21,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import static com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.utils.Constants.ForFireBase.FB_CHILD_LOTS;
-import static com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.utils.Constants.ForFireBase.FB_CHILD_USER_LOTS;
-import static com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.utils.Constants.ForMyTags.MY_TAG;
+import static com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Model.Constants.ForFireBase.FB_CHILD_LOTS;
+import static com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Model.Constants.ForFireBase.FB_CHILD_USER_LOTS;
+import static com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Model.Constants.ForMyTags.MY_TAG;
 
 /**
  * Created by Operator on 12.12.2016.

@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MViewP.AdsBoardActivity"
+            android:name=".View.AdsBoardActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/app_name" />
-        <activity android:name=".MViewP.SignInActivity"
+        <activity android:name=".View.SignInActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

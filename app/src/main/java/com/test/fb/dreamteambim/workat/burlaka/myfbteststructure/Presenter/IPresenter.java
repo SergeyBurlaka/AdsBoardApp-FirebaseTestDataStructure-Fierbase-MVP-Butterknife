@@ -1,9 +1,9 @@
-package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MVPresenter;
+package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Presenter;
 
 import android.support.v7.widget.RecyclerView;
 
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MViewP.IView;
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.ModelVP.Lot;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.View.IView;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Model.Lot;
 
 /**
  * Created by Operator on 10.12.2016.

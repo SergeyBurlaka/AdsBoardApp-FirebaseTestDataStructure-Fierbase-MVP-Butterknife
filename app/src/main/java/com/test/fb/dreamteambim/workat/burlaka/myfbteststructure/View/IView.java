@@ -1,4 +1,4 @@
-package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MViewP;
+package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.View;
 
 import android.support.v7.widget.RecyclerView;
 

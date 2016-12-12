@@ -1,4 +1,4 @@
-package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MVPresenter;
+package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Presenter;
 
 import android.util.Log;
 
@@ -6,7 +6,7 @@ import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 
-import static com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.utils.Constants.ForMyTags.MY_TAG;
+import static com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Model.Constants.ForMyTags.MY_TAG;
 
 /**
  * Created by Operator on 10.12.2016.

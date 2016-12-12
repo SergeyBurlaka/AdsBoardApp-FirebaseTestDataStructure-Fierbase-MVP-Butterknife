@@ -1,9 +1,9 @@
-package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.ModelVP;
+package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Model;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.Query;
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MVPresenter.IPresenter;
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MViewP.AdsHolder;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Presenter.IPresenter;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.View.AdsHolder;
 
 import java.util.Set;
 

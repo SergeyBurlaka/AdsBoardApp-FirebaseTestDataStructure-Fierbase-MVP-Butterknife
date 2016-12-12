@@ -1,4 +1,4 @@
-package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MViewP;
+package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,8 +13,8 @@ import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.sdsmdg.tastytoast.TastyToast;
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MVPresenter.IPresenter;
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MVPresenter.Presenter;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Presenter.IPresenter;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Presenter.Presenter;
 import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.R;
 
 import butterknife.BindView;

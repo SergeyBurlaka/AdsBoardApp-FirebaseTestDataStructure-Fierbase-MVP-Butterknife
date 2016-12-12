@@ -1,4 +1,4 @@
-package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.utils;
+package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Model;
 
 /**
  * Created by Operator on 10.12.2016.

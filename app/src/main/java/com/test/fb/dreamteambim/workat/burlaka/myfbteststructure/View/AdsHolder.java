@@ -1,12 +1,12 @@
-package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MViewP;
+package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.View;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MVPresenter.IPresenter;
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.ModelVP.Lot;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Presenter.IPresenter;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Model.Lot;
 import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.R;
 
 import java.util.Set;
