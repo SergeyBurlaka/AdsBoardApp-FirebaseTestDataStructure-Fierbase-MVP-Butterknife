@@ -15,14 +15,19 @@ public class Lot {
     private String lotId;
     private boolean isSelected;
 
+    // TODO_+: 13.12.2016
+    // add field category
+    private String category;
+
     public Lot() {
     }
 
-    public Lot(String owner, String text, String uid, String lotId) {
+    public Lot(String owner, String text, String uid, String lotId, String category) {
         this.owner = owner;
         this.text = text;
         this.uid = uid;
         this.lotId = lotId;
+        this.category = category;
     }
 
     public Lot(String uid, String owner, String message) {
@@ -66,6 +71,17 @@ public class Lot {
         result.put("text", text);
         result.put("owner", owner);
         result.put("lotId",lotId);
+        // TODO_+: 13.12.2016
+        // add put category
+        result.put("category", category);
         return result;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

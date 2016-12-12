@@ -50,8 +50,7 @@ public class MyFireBaseAdsAdapter extends FirebaseRecyclerAdapter <Lot,AdsHolder
     protected void populateViewHolder(AdsHolder productItemViewHolder, Lot lot, int position) {
         productItemViewHolder.setTitle(lot.getText());
         productItemViewHolder.setEmail(lot.getOwner());
-        productItemViewHolder.setIsLiked();
-
+        productItemViewHolder.setCategory(lot.getCategory());
         //checkBox liked products
         productItemViewHolder.setLikedUser(lot, mainPresenter, likedLots);
     }

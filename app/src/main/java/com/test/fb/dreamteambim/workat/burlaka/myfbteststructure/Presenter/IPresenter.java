@@ -16,4 +16,6 @@ public interface IPresenter {
     void userliked(Lot lot, String lotKey, Boolean isLiked);
     void showToast(String check);
     void setAdapterTolist(RecyclerView.Adapter rvAdapter);
+
+    String getCategory();
 }

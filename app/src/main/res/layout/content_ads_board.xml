@@ -10,19 +10,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.View.AdsBoardActivity"
+    tools:context="com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.View.MainAdsActivity"
     tools:showIn="@layout/activity_ads_board">
-
-    <Button
-        android:id="@+id/sign_out_button_ActivityAdsBoard"
-        android:text="@string/sign_out"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:onClick="onSignOut"
-        tools:ignore="HardcodedText,ObsoleteLayoutParam,RelativeOverlap"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <android.support.v7.widget.CardView
         android:id="@+id/fb_cardView_ActivityAdsBoard"
@@ -58,18 +47,6 @@
         android:layout_alignParentEnd="true" />
 
 
-    <ImageView
-        android:id="@+id/imageView_crashMan_ActivityAdsBoard"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
-        app:srcCompat="@drawable/ic_crash_men"
-        tools:ignore="ContentDescription"
-        android:layout_alignBottom="@+id/fb_cardView_ActivityAdsBoard"
-        android:layout_toLeftOf="@+id/button_userp_ActivityAdsBoard"
-        android:layout_toStartOf="@+id/button_userp_ActivityAdsBoard"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp" />
-
     <EditText
         android:id="@+id/post_lot_ActivityAdsBoard"
         android:layout_width="wrap_content"
@@ -82,15 +59,7 @@
         android:layout_toStartOf="@+id/button_add_ActivityAdsBoard"
         tools:ignore="UnknownId" />
 
-    <Button
-        android:id="@+id/button_product_ActivityAdsBoard"
-        android:text="@string/product"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onProductShow"
-        android:layout_below="@+id/post_lot_ActivityAdsBoard"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
 
     <android.support.v7.widget.CardView
         android:id="@+id/rv_cardView_ads_ActivityAdsBoard"
@@ -114,14 +83,37 @@
          />
     </android.support.v7.widget.CardView>
 
+    <Spinner
+        android:id="@+id/spinner_ActivityAdsBoard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription"
+        android:layout_below="@+id/rv_cardView_ads_ActivityAdsBoard"
+        android:layout_alignBottom="@+id/fb_cardView_ActivityAdsBoard"
+        android:layout_alignRight="@+id/button_userp_ActivityAdsBoard"
+        android:layout_alignEnd="@+id/button_userp_ActivityAdsBoard">
+    </Spinner>
+
     <Button
         android:id="@+id/button_userp_ActivityAdsBoard"
         android:text="@string/userp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onCLickQuery"
-        android:layout_below="@+id/button_add_ActivityAdsBoard"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignTop="@+id/sign_out_button_ActivityAdsBoard"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/sign_out_button_ActivityAdsBoard"
+        android:text="@string/sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:onClick="onSignOut"
+        tools:ignore="HardcodedText,ObsoleteLayoutParam,RelativeOverlap"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/post_lot_ActivityAdsBoard"
+        android:layout_toEndOf="@+id/post_lot_ActivityAdsBoard" />
 
     <ImageView
         android:id="@+id/imageView_crash_ActivityAdsBoard"
@@ -132,6 +124,9 @@
         tools:ignore="ContentDescription"
         android:layout_above="@+id/button_add_ActivityAdsBoard"
         android:layout_alignLeft="@+id/button_add_ActivityAdsBoard"
-        android:layout_alignStart="@+id/button_add_ActivityAdsBoard" />
+        android:layout_alignStart="@+id/button_add_ActivityAdsBoard"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp" />
+
 
 </RelativeLayout>

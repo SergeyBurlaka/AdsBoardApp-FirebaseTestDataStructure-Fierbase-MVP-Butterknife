@@ -26,11 +26,14 @@ public class AdsHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.email_itemProductList)
     TextView emailField;
 
-    @BindView(R.id.price_itemProductList)
-    TextView priceProduct;
-
     @BindView(R.id.checkbox_itemProductList)
     CheckBox checkbox;
+
+    // TODO_+:
+    // 13.12.2016 find category spinner
+    @BindView(R.id.category_itemProductList)
+    TextView category;
+    //todo --------
 
     public AdsHolder(View itemView) {
         super(itemView);
@@ -62,5 +65,12 @@ public class AdsHolder extends RecyclerView.ViewHolder {
     }
 
     public void setIsLiked() {
+    }
+
+    public void setCategory(String category){
+        // TODO_+: 13.12.2016
+        // create set category
+        this.category.setText(category);
+        //todo ------>
     }
 }

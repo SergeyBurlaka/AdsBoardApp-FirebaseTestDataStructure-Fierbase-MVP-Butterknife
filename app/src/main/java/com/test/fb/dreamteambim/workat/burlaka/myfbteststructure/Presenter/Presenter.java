@@ -33,7 +33,7 @@ public class Presenter implements IPresenter {
 
     @Override
     public void onClickAddLot() {
-        firebasehelper.addToBase(mainView.getLotsMessage());
+        firebasehelper.addToBase(mainView.getLotsMessage(), mainView.getCategory());
         mainView.cleanMessageField();
     }
 
@@ -58,5 +58,10 @@ public class Presenter implements IPresenter {
     @Override
     public void setAdapterTolist(RecyclerView.Adapter rvAdapter) {
      mainView.setRecyclerViewAdapter(rvAdapter);
+    }
+
+    @Override
+    public String getCategory() {
+        return mainView.getCategory();
     }
 }

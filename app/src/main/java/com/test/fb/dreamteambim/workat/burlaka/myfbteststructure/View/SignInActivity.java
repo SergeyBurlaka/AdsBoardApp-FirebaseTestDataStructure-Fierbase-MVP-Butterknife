@@ -31,7 +31,7 @@ public class SignInActivity extends AppCompatActivity {
     private void firebaseLogin() {
         if (mFirebaseAuth.getCurrentUser() != null) {
             // already signed in
-            startActivity(new Intent(this, AdsBoardActivity.class));
+            startActivity(new Intent(this, MainAdsActivity.class));
             finish();
 
         } else {
@@ -50,7 +50,7 @@ public class SignInActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             // user is signed in!
-            startActivity(new Intent(this, AdsBoardActivity.class));
+            startActivity(new Intent(this, MainAdsActivity.class));
             finish();
             return;
         }

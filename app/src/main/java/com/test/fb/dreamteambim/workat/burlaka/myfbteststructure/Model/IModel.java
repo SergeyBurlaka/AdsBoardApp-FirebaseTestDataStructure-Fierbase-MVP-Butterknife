@@ -7,6 +7,6 @@ package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Model;
 public interface IModel {
     void initDataBase();
     void onQuery();
-    void addToBase(String message);
+    void addToBase(String message, String category);
     void setCheckedItem(Lot lot, String lotKey,Boolean isLiked);
 }

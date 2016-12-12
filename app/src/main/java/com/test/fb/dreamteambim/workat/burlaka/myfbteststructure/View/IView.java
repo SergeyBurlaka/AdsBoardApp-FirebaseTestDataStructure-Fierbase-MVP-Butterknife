@@ -11,4 +11,5 @@ public interface IView {
     void cleanMessageField();
     void showToast(String str);
     void setRecyclerViewAdapter(RecyclerView.Adapter rvAdapter);
+    String getCategory();
 }

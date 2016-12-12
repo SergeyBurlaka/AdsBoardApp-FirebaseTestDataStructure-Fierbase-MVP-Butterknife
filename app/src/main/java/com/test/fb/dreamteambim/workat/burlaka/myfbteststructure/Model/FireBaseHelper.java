@@ -13,11 +13,13 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Presenter.IPresenter;
 import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.Presenter.MyChildEventListener;
-import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.View.AdsHolder;
 import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.R;
+import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.View.AdsHolder;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -91,14 +93,14 @@ public class FireBaseHelper implements IModel {
     }
 
     @Override
-    public void addToBase(String message ) {
+    public void addToBase(String message, String category ) {
         // Create new post at /user-posts/$userid/$postid
         // and at /posts/$postid simultaneously
         String lotId = mDatabase.child(FB_CHILD_LOTS).push().getKey();
 
         //create new lot
         //******************* String owner, String text, String uid, String lotId
-        Lot lot = new Lot( fbUser.getEmail(), message,fbUser.getUid(), lotId );
+        Lot lot = new Lot( fbUser.getEmail(), message,fbUser.getUid(), lotId, category );
 
         //turn to map
         Map<String, Object> lotValues = lot.toMapInfo();
@@ -123,7 +125,36 @@ public class FireBaseHelper implements IModel {
 
     @Override
     public void onQuery() {
-        on_qd_test();
+        String category = mainPresenter.getCategory();
+        //on_qd_test();
+        queryCategory(category);
+    }
+
+    private void queryCategory(String category) {
+        // TODO_+: 13.12.2016
+        // todo_+------------- 1 create query category
+        // todo_+------------- 2 Choosing category via spinner
+        Query lotsIdQuery = mDatabase.child(FB_CHILD_LOTS ).orderByChild("category").equalTo(category);//.equalTo("anatoliy8827@gmail.com");
+        lotsIdQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                List <String> lotsList = new ArrayList<String>();
+                for(DataSnapshot singleSnapshot : dataSnapshot.getChildren())//get node ProductID
+                {
+                    DataSnapshot vMessageLots =  singleSnapshot.child("text");
+                    Log.d(MY_TAG,  " message is " +  vMessageLots.getValue());
+                    lotsList.add((String)vMessageLots.getValue());
+
+                }
+                mainPresenter.showToast(lotsList.toString());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e(MY_TAG, "onCancelled", databaseError.toException());
+            }
+        });
     }
 
     public Query getDataBaseRef() {
