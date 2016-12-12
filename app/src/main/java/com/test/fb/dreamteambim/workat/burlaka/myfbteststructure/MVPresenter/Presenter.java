@@ -24,7 +24,7 @@ public class Presenter implements IPresenter {
     @Override
     public void setView(IView iView){
             this.mainView = iView;
-        }
+    }
 
     @Override
     public void onCreate() {
@@ -42,7 +42,6 @@ public class Presenter implements IPresenter {
         firebasehelper.onQuery();
     }
 
-
     //manage from list checkbox
     @Override
     public void userliked(Lot lot, String lotKey, Boolean isLiked) {
@@ -52,20 +51,12 @@ public class Presenter implements IPresenter {
     }
 
     @Override
-    public boolean isULiked(Lot lot) {
-        // 12.12.2016
-        // read selected from firebase
-        return  firebasehelper.isItemChecked(lot);
-    }
-
-    @Override
     public void showToast(String check) {
     mainView.showToast(check);
     }
 
     @Override
-    public RecyclerView.Adapter getAdapter() {
-        return firebasehelper.getFirebaseAdapter();
+    public void setAdapterTolist(RecyclerView.Adapter rvAdapter) {
+     mainView.setRecyclerViewAdapter(rvAdapter);
     }
-
 }

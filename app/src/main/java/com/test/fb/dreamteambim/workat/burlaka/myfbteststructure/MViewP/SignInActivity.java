@@ -1,16 +1,13 @@
 package com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MViewP;
 
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.ui.ResultCodes;
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.R;
 
@@ -18,15 +15,8 @@ import java.util.Arrays;
 
 public class SignInActivity extends AppCompatActivity {
 
-    private static final String TAG = "AndroidBash";
     private static final int RC_SIGN_IN = 9001;
-
-    private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mFirebaseAuth;
-
-    private Button mSignInButton;
-    private ProgressDialog mProgressDialog;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,23 +24,17 @@ public class SignInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         // Initialize FirebaseAuth
-        //You need to include google-services.json (downloaded from firebase console) file under the "app" folder of this project.
         mFirebaseAuth = FirebaseAuth.getInstance();
         firebaseLogin();
     }
 
-
-
     private void firebaseLogin() {
         if (mFirebaseAuth.getCurrentUser() != null) {
             // already signed in
-            //Toast.makeText(SignInActivity.this, "already signed in",
-                   // Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, AdsBoardActivity.class));
             finish();
 
         } else {
-
             startActivityForResult(
                     AuthUI.getInstance()
                             .createSignInIntentBuilder()
@@ -58,22 +42,15 @@ public class SignInActivity extends AppCompatActivity {
                                     new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build()))
                             .build(),
                     RC_SIGN_IN);
-
-            // not signed in
         }
     }
-
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             // user is signed in!
-           // Toast.makeText(SignInActivity.this, "user is signed in!",
-                    //Toast.LENGTH_SHORT).show();
-
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, AdsBoardActivity.class));
             finish();
             return;
         }
@@ -92,8 +69,5 @@ public class SignInActivity extends AppCompatActivity {
 
             return;
         }
-        //Toast.makeText(SignInActivity.this, "on A result",
-               // Toast.LENGTH_SHORT).show();
     }
-
 }

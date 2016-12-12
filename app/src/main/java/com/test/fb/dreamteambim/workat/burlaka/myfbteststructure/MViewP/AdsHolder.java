@@ -9,6 +9,8 @@ import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.MVPresenter.IPr
 import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.ModelVP.Lot;
 import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.R;
 
+import java.util.Set;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -17,7 +19,6 @@ import butterknife.ButterKnife;
  */
 
 public class AdsHolder extends RecyclerView.ViewHolder {
-
 
     @BindView(R.id.title_itemProductList)
     TextView titleField;
@@ -31,11 +32,9 @@ public class AdsHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.checkbox_itemProductList)
     CheckBox checkbox;
 
-
     public AdsHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);
-
     }
 
     public void setTitle(String name) {
@@ -46,38 +45,22 @@ public class AdsHolder extends RecyclerView.ViewHolder {
         emailField.setText(text);
     }
 
-    public void setLikedUser (final Lot lot, final IPresenter presenter){
-        //presenter.showToast(lot.getLotId());
-
-        //checkbox.setTag(lot.getLotId());
-
-        //checkbox.setChecked(presenter.isULiked(lot));
-
-
-         checkbox.setChecked(false);
-
+    public void setLikedUser (final Lot lot, final IPresenter presenter, final Set<String> likedLots){
+        // TODO_+: 12.12.2016
+        //check box set checked if key from lot exist
+        checkbox.setChecked( likedLots.contains(lot.getLotId()));
 
         //on user like-click
         checkbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 CheckBox cb = (CheckBox) v;
-               // String lotId = (String) cb.getTag();
-
-                /*presenter.showToast(
-                        "Product key "+lot.getLotId()+
-                                "\n" +"is check" +cb.isChecked());*/
-
                 //***************Lot lot, String lotKey, Boolean isLiked
              presenter.userliked(lot,lot.getLotId(),cb.isChecked());
-
             }
         });
     }
 
-
     public void setIsLiked() {
-
     }
 }

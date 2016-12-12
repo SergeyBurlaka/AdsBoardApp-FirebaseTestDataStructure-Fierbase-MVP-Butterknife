@@ -9,7 +9,6 @@ import java.util.Map;
  * Created by Operator on 08.12.2016.
  */
 public class Lot {
-
     private String owner;
     private String text;
     private String uid;
@@ -27,7 +26,6 @@ public class Lot {
     }
 
     public Lot(String uid, String owner, String message) {
-
         this.text = message;
         this.uid = uid;
         this.owner = owner;
@@ -68,7 +66,6 @@ public class Lot {
         result.put("text", text);
         result.put("owner", owner);
         result.put("lotId",lotId);
-        //test git
         return result;
     }
 }

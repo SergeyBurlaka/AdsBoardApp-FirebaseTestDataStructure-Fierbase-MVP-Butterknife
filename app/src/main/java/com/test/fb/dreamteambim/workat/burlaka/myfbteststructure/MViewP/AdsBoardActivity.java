@@ -20,11 +20,11 @@ import com.test.fb.dreamteambim.workat.burlaka.myfbteststructure.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements IView {
+public class AdsBoardActivity extends AppCompatActivity implements IView {
 
     //DI using
-    @BindView(R.id.post_lot)
-     EditText mMessage;
+    @BindView(R.id.post_lot_ActivityAdsBoard)
+    EditText mMessage;
 
     @BindView(R.id.lotsListView)
     RecyclerView messagesView;
@@ -43,10 +43,12 @@ public class MainActivity extends AppCompatActivity implements IView {
         //include DI
         ButterKnife.bind(this);
 
-        //include MVP
-        //main activity does not know about firebase things;
-        //main activity is only speaking with presenter
-        // because life circle or user click some view
+        /**
+         *    include MVP
+         *    Main activity does not know about firebase things.
+         *    Main activity is only speaking with presenter,
+         *    because life circle or user click some view.
+         */
         mainPresenter = new Presenter();
         mainPresenter.setView(this);
         mainPresenter.onCreate();
@@ -55,24 +57,33 @@ public class MainActivity extends AppCompatActivity implements IView {
         initLotsList ();
     }
 
-    public void onCLickAddLot(View view){
-        //MVP using
-        mainPresenter.onClickAddLot();
-    }
 
-    public void onCLickQuery(View view) {
-        //MVP using
-        mainPresenter.onClickQuery();
-    }
-
-    private void initLotsList(){
+    /**
+     *  Method for MVP usage.
+     *  This override method for managing by presenter, and
+     *  creating list of product ads
+     */
+    @Override
+    public void setRecyclerViewAdapter(RecyclerView.Adapter rvAdapter) {
 
         //init recycler view list
         messagesView.setHasFixedSize(true);
         messagesView.setLayoutManager(new LinearLayoutManager(this));
 
-        mAdapter_rv = mainPresenter.getAdapter();
+        //set adapter getting from firebase helper via presenter
+        this.mAdapter_rv = rvAdapter;
         messagesView.setAdapter(mAdapter_rv);
+    }
+
+    public void onCLickAddLot(View view){
+        mainPresenter.onClickAddLot();
+    }
+
+    public void onCLickQuery(View view) {
+        mainPresenter.onClickQuery();
+    }
+
+    private void initLotsList(){
     }
 
     public void onSignOut (View view){
@@ -81,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements IView {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     public void onComplete(@NonNull Task<Void> task) {
                         // user is now signed out
-                        startActivity(new Intent(MainActivity.this, SignInActivity.class));
+                        startActivity(new Intent(AdsBoardActivity.this, SignInActivity.class));
                         finish();
                     }
                 });
@@ -93,8 +104,10 @@ public class MainActivity extends AppCompatActivity implements IView {
         mAdapter_rv = null;
     }
 
-    //MVP usage methods
-    //methods for managing by presenter
+    /**
+     * Method for MVP usage
+     *  This override methods for managing by presenter
+     */
     @Override
     public String getLotsMessage() {
         return mMessage.getText().toString();
@@ -107,7 +120,6 @@ public class MainActivity extends AppCompatActivity implements IView {
 
     @Override
     public void showToast(String str) {
-
         TastyToast.makeText(this, str, TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
     }
 }
