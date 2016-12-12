@@ -68,6 +68,7 @@ public class Lot {
         result.put("text", text);
         result.put("owner", owner);
         result.put("lotId",lotId);
+        //test git 
         return result;
     }
 }
