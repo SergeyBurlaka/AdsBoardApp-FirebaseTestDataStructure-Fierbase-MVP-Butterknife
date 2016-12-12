@@ -11,5 +11,5 @@ Recycler View,
 ##Screenshots
 <img src="https://github.com/SergeyBurlaka/AdsBoardApp-FirebaseTestDataStructure-Fierbase-MVP-Butterknife/blob/master/IMG/1/Screenshot_10.png">
 <img src="https://github.com/SergeyBurlaka/AdsBoardApp-FirebaseTestDataStructure-Fierbase-MVP-Butterknife/blob/master/IMG/1/Screenshot_11.png">
-<img src="https://github.com/SergeyBurlaka/AdsBoardApp-FirebaseTestDataStructure-Fierbase-MVP-Butterknife/blob/master/IMG/0/Screenshot_12.png">
+
 
