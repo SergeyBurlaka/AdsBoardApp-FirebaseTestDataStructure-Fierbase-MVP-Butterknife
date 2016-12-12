@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">fb-test-structure-v0.1</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_msg">Welcome to Learning @ AndroidBash </string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="loading">Loading</string>
+    <string name="post">Post Lot</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="product"> reset </string>
+    <string name="text_information">text_information</string>
+    <string name="userp">QUERY</string>
+    <string name="checkbox">CheckBox</string>
+</resources>

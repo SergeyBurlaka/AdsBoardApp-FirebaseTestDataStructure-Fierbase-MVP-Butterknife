@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "409545774908",
+    "firebase_url": "https://fbtest-structure.firebaseio.com",
+    "project_id": "fbtest-structure",
+    "storage_bucket": "fbtest-structure.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409545774908:android:fb71b96ece2f67b7",
+        "android_client_info": {
+          "package_name": "com.test.fb.dreamteambim.workat.burlaka.myfbteststructure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409545774908-96t5etofoc5f84kai6ta1ph1fkq53tl2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.test.fb.dreamteambim.workat.burlaka.myfbteststructure",
+            "certificate_hash": "B1A790150AE22B15F179E8E2EC64FD747B602228"
+          }
+        },
+        {
+          "client_id": "409545774908-mc1fbel41751k0i1ige7iqvbf8du4mjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCikp0SwsPGj34hAedqdQv8O3C8qPbaips"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409545774908-mc1fbel41751k0i1ige7iqvbf8du4mjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
