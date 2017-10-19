@@ -17,12 +17,6 @@ Recycler View
 
 ##To read
 
-[Read and Write Data on Android](https://firebase.google.com/docs/database/android/read-and-write) (firebase.google.com) 
-
-[Structure Your Database](https://firebase.google.com/docs/database/android/structure-data) (firebase.google.com)
-
-[How to structure friendship data with firebase?](http://stackoverflow.com/a/38960217/6352712) (stackoverflow.com/) 
-
 [What's the best way of structuring data on firebase?](http://stackoverflow.com/a/16423316/6352712) (stackoverflow.com/) 
 
 ##Screenshots
